@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Letter for You | Alfat ♡</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500&family=Sacramento&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar-custom">
+        <div class="nav-inner">
+
+            <a href="index.html" class="nav-brand">A <span>♡</span></a>
+
+            <div class="nav-links">
+                <a href="story.html">Our Story</a>
+                <a href="memories.html">Memories</a>
+                <a href="prayers.html">My Wishes</a>
+                <a href="itinerary.html">Our Plans</a>
+                <a href="letter.html" class="active">My Letter</a>
+            </div>
+
+            <button id="musicToggle" class="music-toggle" type="button">
+                ♫ MUSIC OFF
+            </button>
+
+        </div>
+    </nav>
+
+
+    <!-- Page Header -->
+    <section class="page-header">
+
+        <p class="eyebrow">SOMETHING FROM MY HEART</p>
+
+        <h1>A Letter for You</h1>
+
+        <p class="page-description">
+            I have something to tell you.
+            Open this little envelope when you're ready.
+        </p>
+
+    </section>
+
+
+    <!-- Envelope Section -->
+    <section class="letter-section">
+
+        <div class="letter-instruction">
+            <p>A LITTLE LETTER, WRITTEN JUST FOR YOU</p>
+        </div>
+
+        <div class="envelope-container">
+
+            <div id="envelope" class="envelope">
+
+                <div class="envelope-back"></div>
+
+                <div class="letter-inside">
+                    <span>For Alfat ♡</span>
+                </div>
+
+                <div class="envelope-front"></div>
+
+                <div class="envelope-flap"></div>
+
+                <div class="envelope-seal">♡</div>
+
+            </div>
+
+            <p class="envelope-hint">
+                CLICK THE ENVELOPE TO OPEN
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Letter Overlay -->
+    <div id="letterOverlay" class="letter-overlay">
+
+        <div class="letter-paper">
+
+            <button
+                id="closeLetter"
+                class="close-letter"
+                type="button"
+                aria-label="Close letter"
+            >
+                &times;
+            </button>
+
+            <div class="letter-paper-content">
+
+                <p class="letter-date">19 November 2026</p>
+
+                <p class="letter-dear">Dear Alfat,</p>
+
+                <h2>Happy Birthday, My Favorite Person.</h2>
+
+                <p>
+                    First of all, happy birthday to you.
+                    I hope today reminds you of how special
+                    and loved you truly are.
+                </p>
+
+                <p>
+                    I'm grateful for every little moment we share.
+                    Thank you for being part of my days,
+                    for the laughter, the stories,
+                    and all the memories we've made together.
+                </p>
+
+                <p>
+                    I know life won't always be perfect,
+                    but I hope we keep learning, growing,
+                    and supporting each other along the way.
+                </p>
+
+                <p>
+                    On your special day, I wish you endless happiness,
+                    good health, success, and everything your heart
+                    has been hoping for.
+                </p>
+
+                <p>
+                    Thank you for being you.
+                    I'm so lucky to have you in my life.
+                </p>
+
+                <p class="letter-closing">
+                    With all my love,
+                </p>
+
+                <p class="letter-signature">
+                    Yours, always ♡
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bottom Section -->
+    <section class="page-bottom">
+
+        <p>ONE LAST SURPRISE IS WAITING FOR YOU ♡</p>
+
+        <a href="surprise.html" class="enter-button">
+            OPEN YOUR SURPRISE
+            <span>→</span>
+        </a>
+
+    </section>
+
+
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop>
+        <source src="assets/music/your-song.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

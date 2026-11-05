@@ -1,0 +1,1256 @@
+
+/* =========================================
+   1. GLOBAL SETTINGS
+========================================= */
+
+:root {
+    --cream: #f8f3ec;
+    --soft-pink: #ead6d0;
+    --rose: #b47b78;
+    --dark: #403431;
+    --brown: #78615a;
+    --white: #fffdf9;
+    --gold: #c6a77b;
+    --light-rose: #f3e6e1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--dark);
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+::selection {
+    background: var(--soft-pink);
+    color: var(--dark);
+}
+
+
+/* =========================================
+   2. NAVIGATION
+========================================= */
+
+.navbar-custom {
+    width: 100%;
+    padding: 22px 7%;
+    background: rgba(248, 243, 236, 0.95);
+    border-bottom: 1px solid rgba(180, 123, 120, 0.15);
+    position: relative;
+    z-index: 100;
+}
+
+.nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-brand {
+    font-family: "Sacramento", cursive;
+    font-size: 35px;
+    color: var(--rose);
+    white-space: nowrap;
+}
+
+.nav-brand span {
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 27px;
+}
+
+.nav-links a {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--brown);
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--rose);
+}
+
+.music-toggle {
+    background: transparent;
+    border: 1px solid var(--rose);
+    color: var(--rose);
+    padding: 10px 16px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.music-toggle:hover {
+    background: var(--rose);
+    color: white;
+}
+
+
+/* =========================================
+   3. WELCOME PAGE
+========================================= */
+
+.welcome-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 60px 20px;
+    text-align: center;
+    background:
+        radial-gradient(circle at 20% 20%, #f1dfd8, transparent 35%),
+        radial-gradient(circle at 80% 80%, #ead6d0, transparent 35%),
+        var(--cream);
+}
+
+.welcome-content {
+    max-width: 650px;
+    position: relative;
+    z-index: 2;
+    animation: fadeUp 1.2s ease;
+}
+
+.monogram {
+    width: 75px;
+    height: 75px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 35px;
+    font-family: "Sacramento", cursive;
+    font-size: 43px;
+    color: var(--rose);
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--rose);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.eyebrow span {
+    margin: 0 10px;
+}
+
+.welcome-content h1 {
+    font-size: clamp(40px, 7vw, 70px);
+    margin-bottom: -5px;
+}
+
+.birthday-name {
+    font-family: "Sacramento", cursive;
+    font-size: clamp(65px, 10vw, 110px);
+    color: var(--rose);
+    line-height: 1.2;
+}
+
+.welcome-description {
+    max-width: 420px;
+    margin: 25px auto 35px;
+    color: var(--brown);
+    font-size: 13px;
+    line-height: 2;
+}
+
+.enter-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+    padding: 16px 25px;
+    background: var(--rose);
+    color: white;
+    font-size: 10px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.enter-button:hover {
+    background: var(--dark);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.enter-button span {
+    font-size: 18px;
+}
+
+.welcome-footer {
+    margin-top: 70px;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--brown);
+}
+
+.decoration {
+    position: absolute;
+    color: rgba(180, 123, 120, 0.3);
+    font-size: 45px;
+}
+
+.decoration-one {
+    top: 15%;
+    left: 13%;
+}
+
+.decoration-two {
+    top: 25%;
+    right: 15%;
+}
+
+.decoration-three {
+    bottom: 15%;
+    right: 20%;
+}
+
+
+/* =========================================
+   4. GENERAL PAGE HEADER
+========================================= */
+
+.page-header {
+    text-align: center;
+    padding: 90px 20px 65px;
+}
+
+.page-header h1 {
+    font-size: clamp(42px, 7vw, 65px);
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.page-description {
+    max-width: 480px;
+    margin: auto;
+    color: var(--brown);
+    font-size: 13px;
+    line-height: 2;
+}
+
+
+/* =========================================
+   5. STORY PAGE
+========================================= */
+
+.story-section {
+    padding: 50px 8% 100px;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.story-image {
+    position: relative;
+}
+
+.story-image img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    display: block;
+}
+
+.story-image::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: -15px;
+    bottom: -15px;
+    border: 1px solid var(--gold);
+    z-index: -1;
+}
+
+.story-text h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.story-text h2 span {
+    font-family: "Sacramento", cursive;
+    color: var(--rose);
+    font-size: 55px;
+}
+
+.story-text p {
+    font-size: 13px;
+    color: var(--brown);
+    line-height: 2.2;
+    margin-bottom: 20px;
+}
+
+.story-signature {
+    font-family: "Sacramento", cursive;
+    color: var(--rose);
+    font-size: 35px;
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   6. MEMORIES GALLERY
+========================================= */
+
+.memories-section {
+    padding: 20px 0 100px;
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.memory-card {
+    background: var(--white);
+    padding: 12px;
+    box-shadow: 0 10px 30px rgba(64, 52, 49, 0.06);
+    transition: 0.4s;
+}
+
+.memory-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(64, 52, 49, 0.12);
+}
+
+.memory-image {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    cursor: pointer;
+    display: block;
+}
+
+.memory-caption {
+    text-align: center;
+    padding: 20px 10px 12px;
+}
+
+.memory-caption h3 {
+    font-size: 25px;
+    color: var(--rose);
+}
+
+.memory-caption p {
+    font-size: 11px;
+    color: var(--brown);
+    margin: 0;
+}
+
+
+/* Photo Viewer */
+
+.photo-viewer {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: rgba(35, 27, 25, 0.92);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.photo-viewer.active {
+    display: flex;
+}
+
+.photo-viewer img {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+}
+
+.close-viewer {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   7. PRAYER CARDS
+========================================= */
+
+.prayers-section {
+    padding: 20px 0 100px;
+}
+
+.prayer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.prayer-card {
+    height: 320px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.prayer-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.prayer-card.flipped .prayer-card-inner {
+    transform: rotateY(180deg);
+}
+
+.prayer-front,
+.prayer-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+    border: 1px solid rgba(180, 123, 120, 0.3);
+}
+
+.prayer-front {
+    background: var(--white);
+}
+
+.prayer-back {
+    background: var(--rose);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.prayer-icon {
+    font-size: 40px;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.prayer-front h2,
+.prayer-back h2 {
+    font-size: 29px;
+    margin-bottom: 15px;
+}
+
+.prayer-front p {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--brown);
+    text-transform: uppercase;
+}
+
+.prayer-back p {
+    font-size: 12px;
+    line-height: 2;
+}
+
+
+/* =========================================
+   8. ITINERARY PAGE
+========================================= */
+
+.date-banner {
+    max-width: 850px;
+    margin: 0 auto 80px;
+    padding: 55px 20px;
+    background: var(--soft-pink);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.date-banner-content p {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--brown);
+}
+
+.date-banner-content h2 {
+    font-size: clamp(40px, 7vw, 65px);
+    color: var(--dark);
+    margin: 10px 0;
+}
+
+.date-banner-content span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--brown);
+}
+
+.date-decoration {
+    position: absolute;
+    right: 8%;
+    top: 15%;
+    font-size: 65px;
+    color: rgba(180, 123, 120, 0.3);
+}
+
+.itinerary-section {
+    padding: 0 0 100px;
+}
+
+.itinerary-intro {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.itinerary-intro h2 {
+    font-size: 45px;
+}
+
+.itinerary-intro p:last-child {
+    color: var(--brown);
+    font-size: 12px;
+}
+
+.itinerary-timeline {
+    max-width: 850px;
+    margin: auto;
+}
+
+.itinerary-item {
+    display: grid;
+    grid-template-columns: 110px 35px 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.itinerary-time {
+    font-size: 11px;
+    color: var(--rose);
+    text-align: right;
+    padding-top: 25px;
+    letter-spacing: 1px;
+}
+
+.itinerary-dot {
+    width: 32px;
+    height: 32px;
+    background: var(--rose);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.itinerary-item:not(:last-child) .itinerary-dot::after {
+    content: "";
+    position: absolute;
+    top: 32px;
+    width: 1px;
+    height: 125px;
+    background: var(--soft-pink);
+    z-index: -1;
+}
+
+.itinerary-content {
+    background: var(--white);
+    border: 1px solid rgba(180, 123, 120, 0.15);
+}
+
+.itinerary-detail {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.activity-icon {
+    font-size: 27px;
+    color: var(--rose);
+}
+
+.itinerary-detail h3 {
+    font-size: 24px;
+    margin-bottom: 3px;
+}
+
+.itinerary-detail p {
+    color: var(--brown);
+    font-size: 11px;
+    margin: 0;
+}
+
+.detail-arrow {
+    margin-left: auto;
+    color: var(--rose);
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.itinerary-detail:hover .detail-arrow {
+    transform: rotate(45deg);
+}
+
+.activity-description {
+    display: none;
+    padding: 0 25px 22px 68px;
+    font-size: 12px;
+    color: var(--brown);
+    line-height: 2;
+}
+
+.activity-description.show {
+    display: block;
+    animation: fadeUp 0.4s ease;
+}
+
+
+/* =========================================
+   9. LOVE LETTER
+========================================= */
+
+.letter-section {
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.letter-instruction p {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--rose);
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.envelope-container {
+    text-align: center;
+}
+
+.envelope {
+    width: 250px;
+    height: 170px;
+    position: relative;
+    cursor: pointer;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.envelope-back {
+    position: absolute;
+    inset: 0;
+    background: #d9b8ae;
+    border-radius: 5px;
+}
+
+.letter-inside {
+    position: absolute;
+    width: 85%;
+    height: 130px;
+    background: var(--white);
+    left: 7.5%;
+    bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Sacramento", cursive;
+    font-size: 28px;
+    color: var(--rose);
+    transition: 0.6s;
+}
+
+.envelope-front {
+    position: absolute;
+    inset: 0;
+    background: #e6c9be;
+    clip-path: polygon(0 0, 50% 60%, 100% 0, 100% 100%, 0 100%);
+}
+
+.envelope-flap {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    background: #c99e94;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    transform-origin: top;
+    transition: transform 0.6s;
+    z-index: 2;
+}
+
+.envelope-seal {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 35px;
+    background: var(--rose);
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    transition: 0.3s;
+}
+
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+}
+
+.envelope.open .envelope-seal {
+    opacity: 0;
+}
+
+.envelope.open .letter-inside {
+    transform: translateY(-80px);
+}
+
+.envelope-hint {
+    margin-top: 35px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--brown);
+}
+
+
+/* Letter Overlay */
+
+.letter-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(35, 27, 25, 0.75);
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    overflow-y: auto;
+}
+
+.letter-overlay.show {
+    display: flex;
+    animation: fadeIn 0.4s ease;
+}
+
+.letter-paper {
+    width: 100%;
+    max-width: 650px;
+    background: var(--white);
+    padding: 55px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.2);
+}
+
+.close-letter {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: var(--rose);
+    cursor: pointer;
+}
+
+.letter-date {
+    text-align: right;
+    font-size: 11px;
+    color: var(--brown);
+    margin-bottom: 35px;
+}
+
+.letter-dear {
+    font-family: "Sacramento", cursive;
+    font-size: 32px;
+    color: var(--rose);
+}
+
+.letter-paper-content h2 {
+    font-size: 34px;
+    margin: 15px 0 25px;
+}
+
+.letter-paper-content p {
+    font-size: 12px;
+    line-height: 2.2;
+    color: var(--brown);
+}
+
+.letter-paper-content .letter-closing {
+    margin-top: 30px;
+}
+
+.letter-signature {
+    font-family: "Sacramento", cursive;
+    font-size: 35px !important;
+    color: var(--rose) !important;
+}
+
+
+/* =========================================
+   10. SURPRISE PAGE
+========================================= */
+
+.surprise-section {
+    padding: 20px 20px 100px;
+    text-align: center;
+}
+
+.gift-container {
+    margin: 40px auto 70px;
+}
+
+.gift-box {
+    width: 160px;
+    height: 150px;
+    position: relative;
+    margin: auto;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.gift-body {
+    width: 150px;
+    height: 105px;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    background: var(--rose);
+    border-radius: 3px;
+}
+
+.gift-ribbon {
+    position: absolute;
+    width: 25px;
+    height: 100%;
+    background: var(--gold);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gift-lid {
+    width: 170px;
+    height: 35px;
+    background: #c78d89;
+    position: absolute;
+    top: 10px;
+    left: -5px;
+    z-index: 2;
+    border-radius: 4px;
+    transition: transform 0.6s;
+}
+
+.gift-bow {
+    position: absolute;
+    width: 55px;
+    height: 25px;
+    border: 8px solid var(--gold);
+    border-radius: 50%;
+    left: 50%;
+    top: -20px;
+    transform: translateX(-50%);
+}
+
+.gift-instruction {
+    margin-top: 30px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--brown);
+}
+
+.gift-box.open .gift-lid {
+    transform: translateY(-80px) rotate(-15deg);
+}
+
+.gift-box.open {
+    transform: scale(1.05);
+}
+
+.surprise-note {
+    display: none;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 45px;
+    background: var(--white);
+    border: 1px solid var(--soft-pink);
+}
+
+.surprise-note.show {
+    display: block;
+    animation: fadeUp 1s ease;
+}
+
+.surprise-note h2 {
+    font-size: 42px;
+    color: var(--rose);
+    margin-bottom: 20px;
+}
+
+.surprise-note p {
+    font-size: 13px;
+    line-height: 2;
+    color: var(--brown);
+}
+
+.surprise-signature {
+    font-family: "Sacramento", cursive;
+    font-size: 35px;
+    color: var(--rose);
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   11. COUNTDOWN
+========================================= */
+
+.countdown-section {
+    text-align: center;
+    padding: 70px 20px 100px;
+    background: var(--soft-pink);
+}
+
+.countdown-section h2 {
+    font-size: 45px;
+    margin-bottom: 35px;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    width: 100px;
+    height: 100px;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown-item span {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 35px;
+    color: var(--rose);
+}
+
+.countdown-item small {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--brown);
+}
+
+
+/* =========================================
+   12. FLOATING HEARTS
+========================================= */
+
+.floating-heart {
+    position: fixed;
+    bottom: -30px;
+    color: var(--rose);
+    font-size: 25px;
+    pointer-events: none;
+    z-index: 999;
+    animation: floatHeart 5s linear forwards;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   13. BOTTOM SECTION
+========================================= */
+
+.page-bottom {
+    text-align: center;
+    padding: 60px 20px 90px;
+}
+
+.page-bottom p {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--brown);
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   14. ANIMATIONS
+========================================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   15. RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 992px) {
+
+    .navbar-custom {
+        padding: 18px 4%;
+    }
+
+    .nav-inner {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .story-grid {
+        gap: 35px;
+    }
+
+    .memory-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .prayer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .navbar-custom {
+        padding: 15px 5%;
+    }
+
+    .nav-brand {
+        font-size: 30px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .music-toggle {
+        padding: 8px 10px;
+        font-size: 9px;
+    }
+
+    .page-header {
+        padding: 65px 20px 45px;
+    }
+
+    .story-section {
+        padding: 20px 7% 70px;
+    }
+
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .story-image img {
+        height: 380px;
+    }
+
+    .story-text h2 {
+        font-size: 40px;
+    }
+
+    .memory-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .memory-image {
+        height: 350px;
+    }
+
+    .prayer-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin: auto;
+    }
+
+    .prayer-card {
+        height: 280px;
+    }
+
+    .date-banner {
+        margin: 0 15px 60px;
+    }
+
+    .date-decoration {
+        right: 3%;
+        font-size: 40px;
+    }
+
+    .itinerary-item {
+        grid-template-columns: 75px 25px 1fr;
+        gap: 10px;
+    }
+
+    .itinerary-time {
+        font-size: 9px;
+    }
+
+    .itinerary-dot {
+        width: 25px;
+        height: 25px;
+        font-size: 11px;
+    }
+
+    .itinerary-item:not(:last-child) .itinerary-dot::after {
+        top: 25px;
+    }
+
+    .itinerary-detail {
+        padding: 15px 10px;
+        gap: 10px;
+    }
+
+    .itinerary-detail h3 {
+        font-size: 19px;
+    }
+
+    .itinerary-detail p {
+        font-size: 10px;
+    }
+
+    .activity-icon {
+        font-size: 20px;
+    }
+
+    .activity-description {
+        padding: 0 15px 18px;
+        font-size: 11px;
+    }
+
+    .letter-paper {
+        padding: 45px 25px;
+    }
+
+    .letter-paper-content h2 {
+        font-size: 28px;
+    }
+
+    .surprise-note {
+        padding: 30px 20px;
+    }
+
+    .surprise-note h2 {
+        font-size: 34px;
+    }
+
+    .countdown-container {
+        gap: 10px;
+    }
+
+    .countdown-item {
+        width: 75px;
+        height: 85px;
+    }
+
+    .countdown-item span {
+        font-size: 28px;
+    }
+
+}

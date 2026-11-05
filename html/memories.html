@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Memories | Alfat ♡</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500&family=Sacramento&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar-custom">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">A <span>♡</span></a>
+
+            <div class="nav-links">
+                <a href="story.html">Our Story</a>
+                <a href="memories.html" class="active">Memories</a>
+                <a href="prayers.html">My Wishes</a>
+                <a href="itinerary.html">Our Plans</a>
+                <a href="letter.html">My Letter</a>
+            </div>
+
+            <button id="musicToggle" class="music-toggle" type="button">
+                ♫ MUSIC OFF
+            </button>
+        </div>
+    </nav>
+
+
+    <!-- Memories Header -->
+    <section class="page-header">
+        <p class="eyebrow">A COLLECTION OF LITTLE MOMENTS</p>
+
+        <h1>Our Memories</h1>
+
+        <p class="page-description">
+            Every little moment with you deserves a place
+            in my favorite collection.
+        </p>
+    </section>
+
+
+    <!-- Memories Gallery -->
+    <section class="memories-section">
+        <div class="container">
+
+            <div class="memory-grid">
+
+                <div class="memory-card">
+                    <img
+                        src="assets/images/memory1.jpg"
+                        alt="Our first memory"
+                        class="memory-image"
+                    >
+                    <div class="memory-caption">
+                        <h3>Our Beginning</h3>
+                        <p>Every beautiful story starts somewhere.</p>
+                    </div>
+                </div>
+
+                <div class="memory-card">
+                    <img
+                        src="assets/images/memory2.jpg"
+                        alt="A special moment together"
+                        class="memory-image"
+                    >
+                    <div class="memory-caption">
+                        <h3>Little Moments</h3>
+                        <p>The simplest moments become my favorites.</p>
+                    </div>
+                </div>
+
+                <div class="memory-card">
+                    <img
+                        src="assets/images/memory3.jpg"
+                        alt="A happy memory together"
+                        class="memory-image"
+                    >
+                    <div class="memory-caption">
+                        <h3>Our Happiness</h3>
+                        <p>Your smile makes everything better.</p>
+                    </div>
+                </div>
+
+                <div class="memory-card">
+                    <img
+                        src="assets/images/memory4.jpg"
+                        alt="A memorable day"
+                        class="memory-image"
+                    >
+                    <div class="memory-caption">
+                        <h3>Special Days</h3>
+                        <p>Days I wish I could experience again.</p>
+                    </div>
+                </div>
+
+                <div class="memory-card">
+                    <img
+                        src="assets/images/memory5.jpg"
+                        alt="A sweet moment"
+                        class="memory-image"
+                    >
+                    <div class="memory-caption">
+                        <h3>My Favorite Person</h3>
+                        <p>I'm always happy when I'm with you.</p>
+                    </div>
+                </div>
+
+                <div class="memory-card">
+                    <img
+                        src="assets/images/memory6.jpg"
+                        alt="A precious memory"
+                        class="memory-image"
+                    >
+                    <div class="memory-caption">
+                        <h3>To More Memories</h3>
+                        <p>And hopefully, many more moments to come.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Photo Viewer -->
+    <div id="photoViewer" class="photo-viewer">
+
+        <button
+            id="closeViewer"
+            class="close-viewer"
+            type="button"
+            aria-label="Close photo"
+        >
+            &times;
+        </button>
+
+        <img
+            id="viewerImage"
+            src=""
+            alt="Selected memory"
+        >
+
+    </div>
+
+
+    <!-- Bottom Navigation -->
+    <section class="page-bottom">
+        <p>AND THESE ARE ONLY A FEW OF MY FAVORITE MOMENTS ♡</p>
+
+        <a href="prayers.html" class="enter-button">
+            READ MY WISHES
+            <span>→</span>
+        </a>
+    </section>
+
+
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop>
+        <source src="assets/music/your-song.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+
+</body>
+</html>
