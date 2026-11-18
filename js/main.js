@@ -1,32 +1,66 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // =========================
+    // ===================================
     // BACKGROUND MUSIC
-    // =========================
+    // ===================================
 
-    const music = document.getElementById("backgroundMusic");
-    const musicToggle = document.getElementById("musicToggle");
+    const enterGift = document.getElementById("enterGift");
 
-    if (music && musicToggle) {
-        music.volume = 0.3;
+    // Mulai musik saat tombol ENTER diklik
+    if (enterGift) {
+        enterGift.addEventListener("click", function (event) {
 
-        musicToggle.addEventListener("click", function () {
-            if (music.paused) {
-                music.play()
-                    .then(function () {
-                        musicToggle.textContent = "♫ MUSIC ON";
-                    })
-                    .catch(function () {
-                        musicToggle.textContent = "♫ MUSIC OFF";
-                    });
-            } else {
-                music.pause();
-                musicToggle.textContent = "♫ MUSIC OFF";
-            }
+            event.preventDefault();
+
+            // Kirim perintah play ke player.html
+            window.parent.postMessage(
+                { type: "START_MUSIC" },
+                window.location.origin
+            );
+
+            // Pindah ke halaman Story
+            window.parent.document.querySelector(
+                ".persistent-frame"
+            ).src = "story.html";
+
         });
     }
 
+    // Meminta status musik dari player.html
+    function requestMusicStatus() {
+        if (window.parent !== window) {
+            window.parent.postMessage(
+                { type: "MUSIC_GET_STATUS" },
+                window.location.origin
+            );
+        }
+    }
 
+    // Menerima status musik
+    window.addEventListener("message", function (event) {
+
+        if (event.origin !== window.location.origin) {
+            return;
+        }
+
+        if (event.data.type === "MUSIC_STATUS") {
+
+            const musicToggle = document.getElementById("musicToggle");
+
+            if (musicToggle) {
+                musicToggle.textContent = event.data.playing
+                    ? "♫ MUSIC ON"
+                    : "♫ MUSIC OFF";
+            }
+
+        }
+
+    });
+
+    // Meminta status saat halaman dibuka
+    requestMusicStatus();
+
+    
     // =========================
     // MEMORIES PHOTO VIEWER
     // =========================

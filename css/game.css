@@ -1,0 +1,431 @@
+
+/* =====================================
+   CATCH THE HEARTS - GAME PAGE
+===================================== */
+
+.game-page {
+    min-height: 100vh;
+    margin: 0;
+    background: #171216;
+    color: #eee2d9;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+.game-background {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse at 50% 90%, #42232f 0%, transparent 55%),
+        linear-gradient(150deg, #171216, #241923 60%, #120f15);
+}
+
+.game-stars {
+    position: absolute;
+    inset: 0;
+    opacity: .7;
+    background-image:
+        radial-gradient(2px 2px at 20% 30%, #f4d9c8 50%, transparent 100%),
+        radial-gradient(2px 2px at 70% 20%, #f4d9c8 50%, transparent 100%),
+        radial-gradient(1px 1px at 40% 65%, #f4d9c8 50%, transparent 100%),
+        radial-gradient(2px 2px at 85% 75%, #f4d9c8 50%, transparent 100%);
+    background-size: 300px 300px;
+}
+
+/* CONTAINER */
+
+.game-container {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    margin: auto;
+    padding: 35px 25px 50px;
+}
+
+.game-back {
+    color: #c9a6a4;
+    text-decoration: none;
+    font-size: 13px;
+    transition: .3s;
+}
+
+.game-back:hover {
+    color: #f0dfd4;
+}
+
+/* HEADING */
+
+.game-heading {
+    text-align: center;
+    margin: 55px auto 35px;
+}
+
+.game-heading .eyebrow {
+    color: #b77b86;
+    font-size: 10px;
+    letter-spacing: 5px;
+}
+
+.game-heading h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 7vw, 62px);
+    font-weight: 500;
+    margin: 10px 0;
+    color: #f0dfd4;
+}
+
+.game-heading h1 span {
+    color: #c58b91;
+    font-style: italic;
+}
+
+.game-heading p:last-child {
+    color: #b9a6a5;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* GAME INFO */
+
+.game-info {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.info-box {
+    width: 115px;
+    padding: 13px;
+    text-align: center;
+    background: rgba(48, 34, 44, .85);
+    border: 1px solid rgba(183, 123, 134, .3);
+}
+
+.info-box span {
+    display: block;
+    color: #a78b91;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.info-box strong {
+    display: block;
+    margin-top: 5px;
+    color: #f0dfd4;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+}
+
+/* GAME BOARD */
+
+.game-board {
+    position: relative;
+    width: 100%;
+    height: 430px;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 50% 100%, rgba(183, 123, 134, .18), transparent 55%),
+        linear-gradient(180deg, #211923, #30202c);
+    border: 1px solid rgba(183, 123, 134, .4);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, .3);
+}
+
+/* START SCREEN */
+
+.game-start-screen {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    text-align: center;
+    background: rgba(23, 18, 22, .88);
+}
+
+.start-heart {
+    color: #d99aa7;
+    font-size: 55px;
+    animation: heartBeat 1.5s infinite;
+}
+
+.game-start-screen h2,
+.game-result h2 {
+    color: #f0dfd4;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.game-start-screen p,
+.game-result p {
+    max-width: 320px;
+    color: #b9a6a5;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+#startGameBtn,
+#restartGameBtn {
+    margin-top: 20px;
+    padding: 13px 27px;
+    background: #754c57;
+    border: 1px solid #b77b86;
+    color: #fff0e9;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#startGameBtn:hover,
+#restartGameBtn:hover {
+    background: #956673;
+    transform: translateY(-2px);
+}
+
+/* PLAYER - MOCHI */
+
+.game-player {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    width: 75px;
+    height: 85px;
+    transform: translateX(-50%);
+    z-index: 5;
+    transition: none;
+}
+
+.player-head {
+    position: absolute;
+    top: 20px;
+    left: 7px;
+    width: 61px;
+    height: 47px;
+    background: #211b1e;
+    border: 3px solid #b77b86;
+    box-shadow: 4px 4px 0 #754c57;
+    z-index: 2;
+}
+
+.player-ears span {
+    position: absolute;
+    top: 8px;
+    width: 22px;
+    height: 25px;
+    background: #211b1e;
+    border: 3px solid #b77b86;
+    z-index: 1;
+}
+
+.player-ears span:first-child {
+    left: 10px;
+    transform: rotate(-12deg);
+}
+
+.player-ears span:last-child {
+    right: 10px;
+    transform: rotate(12deg);
+}
+
+.player-eye {
+    position: absolute;
+    top: 18px;
+    width: 5px;
+    height: 6px;
+    background: #eee2d9;
+}
+
+.player-eye.left {
+    left: 13px;
+}
+
+.player-eye.right {
+    right: 13px;
+}
+
+.player-nose {
+    position: absolute;
+    left: 27px;
+    top: 29px;
+    width: 6px;
+    height: 4px;
+    background: #b77b86;
+}
+
+.player-body {
+    position: absolute;
+    bottom: 0;
+    left: 18px;
+    width: 39px;
+    height: 22px;
+    background: #211b1e;
+    border: 3px solid #b77b86;
+    z-index: 1;
+}
+
+/* FALLING HEARTS */
+
+.falling-heart {
+    position: absolute;
+    top: -30px;
+    color: #d99aa7;
+    font-size: 25px;
+    line-height: 1;
+    text-shadow: 0 0 12px rgba(217, 154, 167, .4);
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* GAME RESULT */
+
+.game-result {
+    display: none;
+    position: absolute;
+    inset: 0;
+    z-index: 11;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    text-align: center;
+    background: rgba(23, 18, 22, .95);
+}
+
+.game-result.show {
+    display: flex;
+    animation: resultAppear .7s ease forwards;
+}
+
+.result-icon {
+    color: #d99aa7;
+    font-size: 55px;
+}
+
+/* CONTROLS */
+
+.game-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.game-controls p {
+    color: #a78b91;
+    font-size: 11px;
+    text-align: center;
+}
+
+.game-controls button {
+    width: 48px;
+    height: 42px;
+    background: #38272e;
+    border: 1px solid #b77b86;
+    color: #f0dfd4;
+    font-size: 20px;
+    cursor: pointer;
+    touch-action: none;
+}
+
+.game-controls button:active {
+    background: #754c57;
+}
+
+.game-footer {
+    text-align: center;
+    margin-top: 55px;
+    color: #806c74;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* ANIMATIONS */
+
+@keyframes heartBeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes resultAppear {
+    from {
+        opacity: 0;
+        transform: scale(.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .game-container {
+        padding: 25px 15px 40px;
+    }
+
+    .game-heading {
+        margin-top: 45px;
+    }
+
+    .game-board {
+        height: 400px;
+    }
+
+    .game-info {
+        gap: 8px;
+    }
+
+    .info-box {
+        width: 95px;
+        padding: 10px 5px;
+    }
+
+    .game-controls {
+        gap: 12px;
+    }
+
+    .game-controls p {
+        max-width: 140px;
+        line-height: 1.6;
+    }
+}
+
+
+.game-next {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+    padding: 13px 24px;
+    border: 1px solid #b77b86;
+    color: #eee2d9;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+}
+
+.game-next:hover {
+    background: #b77b86;
+    color: #211b1e;
+    transform: translateY(-3px);
+}

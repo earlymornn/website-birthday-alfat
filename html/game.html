@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Catch the Hearts ♡</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/game.css">
+</head>
+
+<body class="game-page">
+
+    <div class="game-background">
+        <div class="game-stars"></div>
+    </div>
+
+    <div class="game-container">
+
+        <a href="story.html" class="game-back">← Back to Our Story</a>
+
+        <div class="game-heading">
+            <p class="eyebrow">A LITTLE GAME FOR YOU</p>
+
+            <h1>Catch the <span>Hearts</span> ♡</h1>
+
+            <p>
+                Help Mochi collect all the falling hearts!
+                Let's see how many you can catch.
+            </p>
+        </div>
+
+        <!-- GAME INFORMATION -->
+
+        <div class="game-info">
+
+            <div class="info-box">
+                <span>SCORE</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <div class="info-box">
+                <span>TIME</span>
+                <strong id="timer">30</strong>
+            </div>
+
+            <div class="info-box">
+                <span>TARGET</span>
+                <strong>15 ♡</strong>
+            </div>
+
+        </div>
+
+        <!-- GAME AREA -->
+
+        <div class="game-board" id="gameBoard">
+
+            <div class="game-start-screen" id="gameStartScreen">
+
+                <div class="start-heart">♡</div>
+
+                <h2>Ready, Alfat?</h2>
+
+                <p>
+                    Catch 15 hearts before the time runs out.
+                    Mochi is counting on you!
+                </p>
+
+                <button id="startGameBtn">
+                    START GAME ✦
+                </button>
+
+            </div>
+
+            <div class="game-player" id="gamePlayer">
+
+                <div class="player-ears">
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="player-head">
+                    <span class="player-eye left"></span>
+                    <span class="player-eye right"></span>
+                    <span class="player-nose"></span>
+                </div>
+
+                <div class="player-body"></div>
+
+            </div>
+
+            <div class="game-result" id="gameResult">
+
+                <div class="result-icon" id="resultIcon">♡</div>
+
+                <h2 id="resultTitle">You did it!</h2>
+
+                <p id="resultDescription"></p>
+
+                <button id="restartGameBtn">
+                    PLAY AGAIN ↻
+                </button>
+
+                <a href="itinerary.html" class="game-next">
+                    SEE OUR BIRTHDAY PLANS
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- GAME CONTROLS -->
+
+        <div class="game-controls">
+
+            <button id="moveLeft" aria-label="Move left">←</button>
+
+            <p>Move Mochi to catch the hearts!</p>
+
+            <button id="moveRight" aria-label="Move right">→</button>
+
+        </div>
+
+        <p class="game-footer">
+            made with love, just for you ♡
+        </p>
+
+    </div>
+
+    <script src="../js/game.js"></script>
+
+</body>
+</html>

@@ -1,17 +1,24 @@
 
 /* =========================================
    1. GLOBAL SETTINGS
+   MIDNIGHT ROMANCE THEME
 ========================================= */
 
 :root {
-    --cream: #f8f3ec;
-    --soft-pink: #ead6d0;
-    --rose: #b47b78;
-    --dark: #403431;
-    --brown: #78615a;
-    --white: #fffdf9;
-    --gold: #c6a77b;
-    --light-rose: #f3e6e1;
+    --cream: #211b1e;
+    --soft-pink: #38272e;
+    --rose: #b77b86;
+    --dark: #eee2d9;
+    --brown: #c0aaa3;
+    --white: #302529;
+    --gold: #b99a72;
+    --light-rose: #49343c;
+
+    --deep-dark: #171214;
+    --burgundy: #70464f;
+    --dusty-rose: #c58b95;
+    --ivory: #eee2d9;
+    --muted-text: #a58d88;
 }
 
 * {
@@ -31,10 +38,7 @@ body {
     overflow-x: hidden;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
     font-family: "Cormorant Garamond", serif;
     font-weight: 500;
 }
@@ -48,9 +52,13 @@ button {
     font-family: inherit;
 }
 
+img {
+    max-width: 100%;
+}
+
 ::selection {
-    background: var(--soft-pink);
-    color: var(--dark);
+    background: var(--rose);
+    color: white;
 }
 
 
@@ -61,8 +69,8 @@ button {
 .navbar-custom {
     width: 100%;
     padding: 22px 7%;
-    background: rgba(248, 243, 236, 0.95);
-    border-bottom: 1px solid rgba(180, 123, 120, 0.15);
+    background: rgba(33, 27, 30, 0.96);
+    border-bottom: 1px solid rgba(185, 154, 114, 0.2);
     position: relative;
     z-index: 100;
 }
@@ -77,7 +85,7 @@ button {
 .nav-brand {
     font-family: "Sacramento", cursive;
     font-size: 35px;
-    color: var(--rose);
+    color: #d49aa2;
     white-space: nowrap;
 }
 
@@ -102,7 +110,7 @@ button {
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: var(--rose);
+    color: var(--dusty-rose);
 }
 
 .music-toggle {
@@ -136,10 +144,13 @@ button {
     overflow: hidden;
     padding: 60px 20px;
     text-align: center;
+
     background:
-        radial-gradient(circle at 20% 20%, #f1dfd8, transparent 35%),
-        radial-gradient(circle at 80% 80%, #ead6d0, transparent 35%),
-        var(--cream);
+        radial-gradient(circle at 20% 20%,
+            rgba(112, 70, 79, 0.25), transparent 38%),
+        radial-gradient(circle at 80% 80%,
+            rgba(185, 154, 114, 0.09), transparent 35%),
+        #211b1e;
 }
 
 .welcome-content {
@@ -160,13 +171,13 @@ button {
     margin: 0 auto 35px;
     font-family: "Sacramento", cursive;
     font-size: 43px;
-    color: var(--rose);
+    color: var(--dusty-rose);
 }
 
 .eyebrow {
     font-size: 10px;
     letter-spacing: 3px;
-    color: var(--rose);
+    color: var(--dusty-rose);
     text-transform: uppercase;
     margin-bottom: 20px;
 }
@@ -178,12 +189,13 @@ button {
 .welcome-content h1 {
     font-size: clamp(40px, 7vw, 70px);
     margin-bottom: -5px;
+    color: var(--ivory);
 }
 
 .birthday-name {
     font-family: "Sacramento", cursive;
     font-size: clamp(65px, 10vw, 110px);
-    color: var(--rose);
+    color: var(--dusty-rose);
     line-height: 1.2;
 }
 
@@ -200,16 +212,17 @@ button {
     align-items: center;
     gap: 25px;
     padding: 16px 25px;
-    background: var(--rose);
-    color: white;
+    background: var(--burgundy);
+    color: #fff5ef;
+    border: 1px solid #91616b;
     font-size: 10px;
     letter-spacing: 2px;
     transition: 0.3s;
 }
 
 .enter-button:hover {
-    background: var(--dark);
-    color: white;
+    background: var(--dusty-rose);
+    color: var(--deep-dark);
     transform: translateY(-3px);
 }
 
@@ -221,12 +234,12 @@ button {
     margin-top: 70px;
     font-size: 9px;
     letter-spacing: 3px;
-    color: var(--brown);
+    color: var(--muted-text);
 }
 
 .decoration {
     position: absolute;
-    color: rgba(180, 123, 120, 0.3);
+    color: rgba(183, 123, 134, 0.35);
     font-size: 45px;
 }
 
@@ -257,7 +270,7 @@ button {
 
 .page-header h1 {
     font-size: clamp(42px, 7vw, 65px);
-    color: var(--dark);
+    color: var(--ivory);
     margin-bottom: 15px;
 }
 
@@ -312,11 +325,12 @@ button {
 .story-text h2 {
     font-size: 48px;
     margin-bottom: 20px;
+    color: var(--ivory);
 }
 
 .story-text h2 span {
     font-family: "Sacramento", cursive;
-    color: var(--rose);
+    color: var(--dusty-rose);
     font-size: 55px;
 }
 
@@ -329,7 +343,7 @@ button {
 
 .story-signature {
     font-family: "Sacramento", cursive;
-    color: var(--rose);
+    color: var(--dusty-rose);
     font-size: 35px;
     margin-top: 25px;
 }
@@ -350,15 +364,16 @@ button {
 }
 
 .memory-card {
-    background: var(--white);
+    background: #302529;
     padding: 12px;
-    box-shadow: 0 10px 30px rgba(64, 52, 49, 0.06);
+    border: 1px solid rgba(185, 154, 114, 0.16);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
     transition: 0.4s;
 }
 
 .memory-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(64, 52, 49, 0.12);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
 }
 
 .memory-image {
@@ -376,7 +391,7 @@ button {
 
 .memory-caption h3 {
     font-size: 25px;
-    color: var(--rose);
+    color: #d49aa2;
 }
 
 .memory-caption p {
@@ -386,13 +401,13 @@ button {
 }
 
 
-/* Photo Viewer */
+/* PHOTO VIEWER */
 
 .photo-viewer {
     position: fixed;
     inset: 0;
     z-index: 999;
-    background: rgba(35, 27, 25, 0.92);
+    background: rgba(15, 11, 13, 0.96);
     display: none;
     justify-content: center;
     align-items: center;
@@ -464,16 +479,17 @@ button {
     align-items: center;
     text-align: center;
     padding: 25px;
-    border: 1px solid rgba(180, 123, 120, 0.3);
+    border: 1px solid rgba(185, 154, 114, 0.25);
+    border-radius: 4px;
 }
 
 .prayer-front {
-    background: var(--white);
+    background: #302529;
 }
 
 .prayer-back {
-    background: var(--rose);
-    color: white;
+    background: var(--burgundy);
+    color: #fff5ef;
     transform: rotateY(180deg);
 }
 
@@ -487,6 +503,7 @@ button {
 .prayer-back h2 {
     font-size: 29px;
     margin-bottom: 15px;
+    color: var(--ivory);
 }
 
 .prayer-front p {
@@ -499,6 +516,7 @@ button {
 .prayer-back p {
     font-size: 12px;
     line-height: 2;
+    color: #f0e3df;
 }
 
 
@@ -510,7 +528,8 @@ button {
     max-width: 850px;
     margin: 0 auto 80px;
     padding: 55px 20px;
-    background: var(--soft-pink);
+    background: #38272e;
+    border: 1px solid rgba(185, 154, 114, 0.2);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -524,7 +543,7 @@ button {
 
 .date-banner-content h2 {
     font-size: clamp(40px, 7vw, 65px);
-    color: var(--dark);
+    color: var(--ivory);
     margin: 10px 0;
 }
 
@@ -539,7 +558,7 @@ button {
     right: 8%;
     top: 15%;
     font-size: 65px;
-    color: rgba(180, 123, 120, 0.3);
+    color: rgba(183, 123, 134, 0.3);
 }
 
 .itinerary-section {
@@ -553,6 +572,7 @@ button {
 
 .itinerary-intro h2 {
     font-size: 45px;
+    color: var(--ivory);
 }
 
 .itinerary-intro p:last-child {
@@ -574,7 +594,7 @@ button {
 
 .itinerary-time {
     font-size: 11px;
-    color: var(--rose);
+    color: var(--dusty-rose);
     text-align: right;
     padding-top: 25px;
     letter-spacing: 1px;
@@ -583,7 +603,7 @@ button {
 .itinerary-dot {
     width: 32px;
     height: 32px;
-    background: var(--rose);
+    background: var(--burgundy);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -599,13 +619,14 @@ button {
     top: 32px;
     width: 1px;
     height: 125px;
-    background: var(--soft-pink);
+    background: var(--burgundy);
     z-index: -1;
 }
 
 .itinerary-content {
-    background: var(--white);
-    border: 1px solid rgba(180, 123, 120, 0.15);
+    background: #302529;
+    border: 1px solid rgba(185, 154, 114, 0.16);
+    border-radius: 4px;
 }
 
 .itinerary-detail {
@@ -618,12 +639,13 @@ button {
 
 .activity-icon {
     font-size: 27px;
-    color: var(--rose);
+    color: var(--dusty-rose);
 }
 
 .itinerary-detail h3 {
     font-size: 24px;
     margin-bottom: 3px;
+    color: var(--ivory);
 }
 
 .itinerary-detail p {
@@ -634,7 +656,7 @@ button {
 
 .detail-arrow {
     margin-left: auto;
-    color: var(--rose);
+    color: var(--dusty-rose);
     font-size: 25px;
     transition: 0.3s;
 }
@@ -673,7 +695,7 @@ button {
 .letter-instruction p {
     font-size: 10px;
     letter-spacing: 2px;
-    color: var(--rose);
+    color: var(--dusty-rose);
     margin-bottom: 35px;
     text-align: center;
 }
@@ -694,7 +716,7 @@ button {
 .envelope-back {
     position: absolute;
     inset: 0;
-    background: #d9b8ae;
+    background: #70464f;
     border-radius: 5px;
 }
 
@@ -702,7 +724,7 @@ button {
     position: absolute;
     width: 85%;
     height: 130px;
-    background: var(--white);
+    background: #eee2d9;
     left: 7.5%;
     bottom: 15px;
     display: flex;
@@ -710,14 +732,14 @@ button {
     align-items: center;
     font-family: "Sacramento", cursive;
     font-size: 28px;
-    color: var(--rose);
+    color: #70464f;
     transition: 0.6s;
 }
 
 .envelope-front {
     position: absolute;
     inset: 0;
-    background: #e6c9be;
+    background: #80535d;
     clip-path: polygon(0 0, 50% 60%, 100% 0, 100% 100%, 0 100%);
 }
 
@@ -726,7 +748,7 @@ button {
     top: 0;
     width: 100%;
     height: 90px;
-    background: #c99e94;
+    background: #98636d;
     clip-path: polygon(0 0, 100% 0, 50% 100%);
     transform-origin: top;
     transition: transform 0.6s;
@@ -740,9 +762,9 @@ button {
     transform: translateX(-50%);
     width: 35px;
     height: 35px;
-    background: var(--rose);
+    background: var(--gold);
     border-radius: 50%;
-    color: white;
+    color: #302529;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -770,12 +792,12 @@ button {
 }
 
 
-/* Letter Overlay */
+/* LETTER OVERLAY */
 
 .letter-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(35, 27, 25, 0.75);
+    background: rgba(15, 11, 13, 0.88);
     z-index: 1000;
     display: none;
     justify-content: center;
@@ -792,12 +814,13 @@ button {
 .letter-paper {
     width: 100%;
     max-width: 650px;
-    background: var(--white);
+    background: #eee2d9;
+    color: #38272e;
     padding: 55px;
     position: relative;
     max-height: 90vh;
     overflow-y: auto;
-    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.4);
 }
 
 .close-letter {
@@ -807,32 +830,33 @@ button {
     background: none;
     border: none;
     font-size: 30px;
-    color: var(--rose);
+    color: #70464f;
     cursor: pointer;
 }
 
 .letter-date {
     text-align: right;
     font-size: 11px;
-    color: var(--brown);
+    color: #80666a;
     margin-bottom: 35px;
 }
 
 .letter-dear {
     font-family: "Sacramento", cursive;
     font-size: 32px;
-    color: var(--rose);
+    color: #965d69;
 }
 
 .letter-paper-content h2 {
     font-size: 34px;
     margin: 15px 0 25px;
+    color: #38272e;
 }
 
 .letter-paper-content p {
     font-size: 12px;
     line-height: 2.2;
-    color: var(--brown);
+    color: #6f5555;
 }
 
 .letter-paper-content .letter-closing {
@@ -842,7 +866,7 @@ button {
 .letter-signature {
     font-family: "Sacramento", cursive;
     font-size: 35px !important;
-    color: var(--rose) !important;
+    color: #965d69 !important;
 }
 
 
@@ -874,7 +898,7 @@ button {
     position: absolute;
     bottom: 0;
     left: 5px;
-    background: var(--rose);
+    background: var(--burgundy);
     border-radius: 3px;
 }
 
@@ -890,7 +914,7 @@ button {
 .gift-lid {
     width: 170px;
     height: 35px;
-    background: #c78d89;
+    background: #98636d;
     position: absolute;
     top: 10px;
     left: -5px;
@@ -930,8 +954,9 @@ button {
     max-width: 600px;
     margin: 0 auto;
     padding: 45px;
-    background: var(--white);
-    border: 1px solid var(--soft-pink);
+    background: #302529;
+    border: 1px solid rgba(185, 154, 114, 0.3);
+    border-radius: 4px;
 }
 
 .surprise-note.show {
@@ -941,7 +966,7 @@ button {
 
 .surprise-note h2 {
     font-size: 42px;
-    color: var(--rose);
+    color: #d49aa2;
     margin-bottom: 20px;
 }
 
@@ -954,7 +979,7 @@ button {
 .surprise-signature {
     font-family: "Sacramento", cursive;
     font-size: 35px;
-    color: var(--rose);
+    color: #d49aa2;
     margin-top: 25px;
 }
 
@@ -966,12 +991,13 @@ button {
 .countdown-section {
     text-align: center;
     padding: 70px 20px 100px;
-    background: var(--soft-pink);
+    background: #38272e;
 }
 
 .countdown-section h2 {
     font-size: 45px;
     margin-bottom: 35px;
+    color: var(--ivory);
 }
 
 .countdown-container {
@@ -984,7 +1010,8 @@ button {
 .countdown-item {
     width: 100px;
     height: 100px;
-    background: var(--white);
+    background: #302529;
+    border: 1px solid rgba(185, 154, 114, 0.2);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -994,7 +1021,7 @@ button {
 .countdown-item span {
     font-family: "Cormorant Garamond", serif;
     font-size: 35px;
-    color: var(--rose);
+    color: #d49aa2;
 }
 
 .countdown-item small {
@@ -1011,7 +1038,7 @@ button {
 .floating-heart {
     position: fixed;
     bottom: -30px;
-    color: var(--rose);
+    color: #c58b95;
     font-size: 25px;
     pointer-events: none;
     z-index: 999;
@@ -1043,7 +1070,7 @@ button {
 .page-bottom p {
     font-size: 10px;
     letter-spacing: 2px;
-    color: var(--brown);
+    color: var(--muted-text);
     margin-bottom: 25px;
 }
 
@@ -1107,7 +1134,6 @@ button {
     .prayer-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 @media (max-width: 600px) {
@@ -1252,5 +1278,1299 @@ button {
     .countdown-item span {
         font-size: 28px;
     }
+}
 
+
+/* =========================================
+   16. PERSISTENT MUSIC PLAYER
+========================================= */
+
+.persistent-player {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: var(--cream);
+}
+
+.persistent-frame {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* =========================================
+   17. MOCHI PIXEL KITTY
+========================================= */
+
+.mochi-container {
+    position: fixed;
+    right: 28px;
+    bottom: 22px;
+    z-index: 9999;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+
+    font-family: "Courier New", monospace;
+
+    /* PENTING: TRANSPARAN */
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+
+    pointer-events: none;
+}
+
+/* CHAT BUBBLE */
+
+.mochi-bubble {
+    position: absolute;
+    right: 0;
+    bottom: 145px;
+    width: 190px;
+    padding: 13px 15px;
+
+    background: #eee2d9;
+    color: #38272e;
+    border: 3px solid #b77b86;
+    box-shadow: 4px 4px 0 #754c57;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(8px);
+    transition: 0.25s ease;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.mochi-bubble::after {
+    content: "";
+    position: absolute;
+    right: 27px;
+    bottom: -10px;
+    width: 15px;
+    height: 15px;
+
+    background: #eee2d9;
+    border-right: 3px solid #b77b86;
+    border-bottom: 3px solid #b77b86;
+
+    transform: rotate(45deg);
+}
+
+.mochi-bubble p {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.7;
+    font-weight: bold;
+}
+
+.mochi-bubble.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+/* CHARACTER BUTTON */
+
+.mochi-character {
+    position: relative;
+    width: 105px;
+    height: 115px;
+    padding: 0;
+
+    border: none;
+    background: transparent !important;
+    box-shadow: none !important;
+
+    cursor: grab;
+    pointer-events: auto;
+    touch-action: none;
+
+    image-rendering: pixelated;
+    animation: mochiFloat 2.5s ease-in-out infinite;
+}
+
+.mochi-character:focus-visible {
+    outline: 2px dashed #b77b86;
+    outline-offset: 6px;
+}
+
+
+/* EARS */
+
+.mochi-ear {
+    position: absolute;
+    top: 4px;
+    width: 29px;
+    height: 34px;
+
+    background: #211b1e;
+    border: 3px solid #b77b86;
+    z-index: 1;
+}
+
+.mochi-ear-left {
+    left: 13px;
+    transform: rotate(-20deg);
+}
+
+.mochi-ear-right {
+    right: 13px;
+    transform: rotate(20deg);
+}
+
+
+/* HEAD */
+
+.mochi-head {
+    position: absolute;
+    top: 23px;
+    left: 8px;
+    width: 89px;
+    height: 67px;
+
+    background: #211b1e;
+    border: 3px solid #b77b86;
+    box-shadow: 4px 4px 0 #754c57;
+    z-index: 2;
+}
+
+
+/* EYES */
+
+.mochi-eye {
+    position: absolute;
+    top: 25px;
+    width: 7px;
+    height: 9px;
+
+    background: #eee2d9;
+    transform-origin: center;
+    animation: mochiBlink 4s infinite;
+}
+
+.mochi-eye-left {
+    left: 23px;
+}
+
+.mochi-eye-right {
+    right: 23px;
+}
+
+@keyframes mochiBlink {
+    0%, 43%, 47%, 100% {
+        transform: scaleY(1);
+    }
+
+    45% {
+        transform: scaleY(0.1);
+    }
+}
+
+
+/* NOSE AND MOUTH */
+
+.mochi-nose {
+    position: absolute;
+    top: 37px;
+    left: 39px;
+    width: 7px;
+    height: 5px;
+    background: #b77b86;
+}
+
+.mochi-mouth {
+    position: absolute;
+    top: 42px;
+    left: 36px;
+    width: 13px;
+    height: 5px;
+    border-bottom: 2px solid #eee2d9;
+}
+
+
+/* CHEEKS */
+
+.mochi-cheek {
+    position: absolute;
+    top: 39px;
+    width: 10px;
+    height: 5px;
+    background: #b77b86;
+    opacity: 0.8;
+}
+
+.mochi-cheek-left {
+    left: 9px;
+}
+
+.mochi-cheek-right {
+    right: 9px;
+}
+
+
+/* BOW */
+
+.mochi-bow {
+    position: absolute;
+    top: 13px;
+    right: 8px;
+    display: flex;
+    z-index: 4;
+}
+
+.mochi-bow span {
+    display: block;
+    width: 13px;
+    height: 13px;
+    background: #873e50;
+    border: 2px solid #c18b91;
+}
+
+.mochi-bow span:first-child {
+    transform: rotate(35deg);
+}
+
+.mochi-bow span:last-child {
+    transform: rotate(-35deg);
+}
+
+.mochi-bow::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    width: 6px;
+    height: 6px;
+    background: #d6a6a3;
+    z-index: 2;
+}
+
+
+/* BODY */
+
+.mochi-body {
+    position: absolute;
+    left: 25px;
+    bottom: 0;
+    width: 55px;
+    height: 31px;
+
+    background: #211b1e;
+    border: 3px solid #b77b86;
+    box-shadow: 4px 4px 0 #754c57;
+    z-index: 1;
+}
+
+.mochi-paw {
+    position: absolute;
+    bottom: -2px;
+    width: 13px;
+    height: 9px;
+    background: #eee2d9;
+}
+
+.mochi-paw-left {
+    left: 5px;
+}
+
+.mochi-paw-right {
+    right: 5px;
+}
+
+
+/* =========================================
+   MOCHI PIXEL TAIL - RESTORED
+========================================= */
+
+.mochi-character::after {
+    content: "";
+    position: absolute;
+
+    width: 22px;
+    height: 13px;
+
+    right: 5px;
+    bottom: 12px;
+
+    border: 5px solid #211b1e;
+    border-left: none;
+    border-radius: 0 15px 15px 0;
+
+    transform-origin: left center;
+    animation: mochiTail 1.8s ease-in-out infinite;
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes mochiTail {
+    0%, 100% {
+        transform: rotate(-15deg);
+    }
+
+    50% {
+        transform: rotate(20deg);
+    }
+}
+
+/* NAME BUTTON */
+
+.mochi-name {
+    padding: 4px 8px;
+
+    color: #d6a6a3;
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 0 #211b1e;
+
+    border: none;
+    background: transparent !important;
+    box-shadow: none !important;
+
+    cursor: pointer;
+    pointer-events: auto;
+    transition: 0.2s;
+}
+
+.mochi-name:hover {
+    color: #eee2d9;
+    transform: scale(1.1);
+}
+
+
+/* MOCHI ANIMATIONS */
+
+@keyframes mochiFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+.mochi-character.mochi-happy {
+    animation: mochiJump 0.55s ease;
+}
+
+@keyframes mochiJump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    35% {
+        transform: translateY(-24px) rotate(-8deg);
+    }
+
+    65% {
+        transform: translateY(-12px) rotate(8deg);
+    }
+}
+
+
+/* MOOD */
+
+.mochi-character.mochi-excited .mochi-eye {
+    transform: scaleY(0.65);
+}
+
+.mochi-character.mochi-sleepy .mochi-eye {
+    transform: scaleY(0.2);
+}
+
+.mochi-character.mochi-love .mochi-cheek {
+    background: #d98a9b;
+    height: 8px;
+}
+
+
+/* DRAGGING */
+
+.mochi-container.dragging {
+    cursor: grabbing;
+}
+
+.mochi-container.dragging .mochi-character {
+    animation: none;
+    cursor: grabbing;
+}
+
+
+/* =========================================
+   18. MOCHI'S LITTLE ROOM
+========================================= */
+
+/* PANEL: TIDAK MENUTUP WEBSITE */
+
+.mochi-room {
+    position: absolute;
+    right: 0;
+    bottom: 180px;
+    width: 300px;
+    padding: 12px;
+
+    /* Warna hanya pada panel kamar */
+    background: #302529;
+    border: 3px solid #b77b86;
+    box-shadow: 6px 6px 0 #754c57;
+
+    z-index: 20;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(12px) scale(0.95);
+    transform-origin: bottom right;
+    transition: 0.25s ease;
+}
+
+.mochi-room.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+}
+
+
+/* ROOM HEADER */
+
+.room-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+
+    color: #d6a6a3;
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    border-bottom: 1px solid #754c57;
+}
+
+.room-header button {
+    border: none;
+    background: transparent;
+    color: #eee2d9;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+
+/* ROOM SCENE */
+
+.room-scene {
+    position: relative;
+    height: 210px;
+    margin-top: 10px;
+    overflow: hidden;
+
+    background: linear-gradient(
+        to bottom,
+        #49343c 0%,
+        #38272e 72%,
+        #211b1e 72%,
+        #211b1e 100%
+    );
+
+    border: 2px solid #754c57;
+    image-rendering: pixelated;
+}
+
+
+/* WINDOW */
+
+.room-window {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    width: 65px;
+    height: 75px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-top: 9px;
+
+    background: #211b35;
+    border: 5px solid #b77b86;
+    box-shadow: inset 0 0 0 3px #49343c;
+
+    color: #eee2d9;
+    font-size: 12px;
+}
+
+.room-window span:nth-child(2) {
+    font-size: 23px;
+    color: #d6b98b;
+}
+
+
+/* WALL PICTURE */
+
+.room-picture {
+    position: absolute;
+    top: 24px;
+    right: 25px;
+    width: 35px;
+    height: 35px;
+
+    display: grid;
+    place-items: center;
+
+    color: #d6a6a3;
+    background: #211b1e;
+    border: 4px solid #b77b86;
+    font-size: 17px;
+}
+
+
+/* BED */
+
+.mochi-bed {
+    position: absolute;
+    bottom: 37px;
+    right: 45px;
+    width: 125px;
+    height: 58px;
+
+    background: #75404f;
+    border: 4px solid #b77b86;
+    box-shadow: 4px 4px 0 #211b1e;
+}
+
+.bed-pillow {
+    position: absolute;
+    top: 6px;
+    left: 9px;
+    width: 40px;
+    height: 23px;
+
+    background: #eee2d9;
+    border: 3px solid #b77b86;
+}
+
+.bed-blanket {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    width: 53px;
+    height: 38px;
+
+    background: #38272e;
+    border: 3px solid #b77b86;
+}
+
+
+/* FISH TOY */
+
+.fish-toy {
+    position: absolute;
+    left: 32px;
+    bottom: 35px;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    font-size: 25px;
+    cursor: pointer;
+    animation: fishWiggle 2s ease-in-out infinite;
+}
+
+.fish-toy:hover {
+    transform: scale(1.3);
+}
+
+.fish-toy:active {
+    transform: scale(0.8);
+}
+
+@keyframes fishWiggle {
+    0%, 100% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+
+/* CARPET */
+
+.room-carpet {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    width: 160px;
+    height: 17px;
+
+    transform: translateX(-50%);
+    background: #873e50;
+    border: 3px solid #b77b86;
+    border-radius: 50%;
+}
+
+
+/* PLANT */
+
+.room-plant {
+    position: absolute;
+    right: 9px;
+    bottom: 35px;
+    font-size: 25px;
+}
+
+
+/* ROOM FOOTER */
+
+.room-footer {
+    padding: 10px 5px 2px;
+    text-align: center;
+}
+
+.room-footer p {
+    margin: 0;
+    color: #d6a6a3;
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   19. MOCHI RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .mochi-container {
+        right: 12px;
+        bottom: 15px;
+    }
+
+    .mochi-room {
+        width: min(280px, calc(100vw - 30px));
+        right: 0;
+        bottom: 170px;
+    }
+
+    .room-scene {
+        height: 195px;
+    }
+}
+
+
+/* REDUCE MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+    .mochi-character,
+    .mochi-eye,
+    .mochi-character::after,
+    .fish-toy {
+        animation: none;
+    }
+}
+
+.mochi-container {
+    position: fixed !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    max-width: 100px !important;
+    max-height: 150px !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    inset: auto 18px 14px auto !important;
+    z-index: 9999 !important;
+}
+
+
+/* =========================================
+   MOCHI LAYOUT FIX
+========================================= */
+
+/* Iframe tetap menjadi area website */
+.persistent-player {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.persistent-frame {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    border: none;
+    z-index: 1;
+}
+
+/* Mochi hanya menempati area kecil */
+.mochi-container {
+    position: fixed !important;
+    right: 18px !important;
+    bottom: 14px !important;
+    left: auto !important;
+    top: auto !important;
+
+    width: max-content !important;
+    height: max-content !important;
+    max-width: 110px !important;
+    max-height: 160px !important;
+
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+
+    transform: none !important;
+    z-index: 10000 !important;
+}
+
+/* Room tidak boleh menutupi seluruh layar */
+.mochi-room {
+    position: fixed !important;
+
+    width: 260px !important;
+    max-width: calc(100vw - 32px) !important;
+    height: auto !important;
+    max-height: 300px !important;
+
+    right: 18px !important;
+    bottom: 145px !important;
+    left: auto !important;
+    top: auto !important;
+
+    padding: 9px !important;
+
+    background: #302529 !important;
+    border: 3px solid #b77b86 !important;
+    box-shadow: 4px 4px 0 #754c57 !important;
+
+    overflow: hidden !important;
+    z-index: 10001 !important;
+
+    display: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
+
+/* Room hanya muncul saat dibuka */
+.mochi-room.open {
+    display: block !important;
+}
+
+/* Batasi area dekorasi room */
+.room-scene {
+    position: relative !important;
+    width: 100% !important;
+    height: 170px !important;
+    max-height: 170px !important;
+    overflow: hidden !important;
+}
+
+/* Jangan biarkan elemen dekorasi melebar */
+.room-header,
+.room-footer {
+    position: relative;
+    width: 100%;
+}
+
+/* Pastikan background transparan di luar room */
+.mochi-container,
+.mochi-character,
+.mochi-name,
+.mochi-bubble {
+    background-color: transparent;
+}
+
+
+/* =========================================
+   RESTORE MOCHI'S LITTLE ROOM
+========================================= */
+
+.mochi-room {
+    display: none;
+    position: fixed;
+    right: 18px;
+    bottom: 145px;
+    width: 260px;
+    max-width: calc(100vw - 32px);
+    height: auto;
+    padding: 9px;
+    background: #302529;
+    border: 3px solid #b77b86;
+    box-shadow: 4px 4px 0 #754c57;
+    z-index: 10001;
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+
+.mochi-room.open {
+    display: block !important;
+}
+
+.room-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #f5dce0;
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+
+.room-header button {
+    background: transparent;
+    border: none;
+    color: #f5dce0;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.room-scene {
+    display: block !important;
+    position: relative;
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    background: linear-gradient(
+        to bottom,
+        #49343c 0%,
+        #65434e 65%,
+        #38272e 65%,
+        #38272e 100%
+    );
+}
+
+/* WINDOW */
+.room-window {
+    position: absolute;
+    top: 15px;
+    left: 18px;
+    width: 65px;
+    height: 65px;
+    background: #252d45;
+    border: 4px solid #c18b91;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #f8e6c8;
+}
+
+/* WALL PICTURE */
+.room-picture {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    width: 35px;
+    height: 35px;
+    background: #e8c5c5;
+    border: 3px solid #b77b86;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #754c57;
+}
+
+/* BED */
+.mochi-bed {
+    position: absolute;
+    bottom: 24px;
+    right: 35px;
+    width: 105px;
+    height: 48px;
+    background: #b77b86;
+    border: 3px solid #e8b9bd;
+}
+
+.bed-pillow {
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    width: 32px;
+    height: 18px;
+    background: #f2d9d8;
+}
+
+.bed-blanket {
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    width: 58px;
+    height: 28px;
+    background: #754c65;
+}
+
+/* FISH TOY */
+.fish-toy {
+    position: absolute;
+    left: 35px;
+    bottom: 25px;
+    background: transparent;
+    border: none;
+    font-size: 23px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* CARPET */
+.room-carpet {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    width: 125px;
+    height: 14px;
+    border-radius: 50%;
+    background: #b77b86;
+}
+
+/* PLANT */
+.room-plant {
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+    font-size: 24px;
+}
+
+/* FOOTER */
+.room-footer {
+    padding-top: 8px;
+    text-align: center;
+    color: #f2d9d8;
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+}
+
+.room-footer p {
+    margin: 0;
+}
+
+
+/* =========================================
+   MOCHI TEXT COLOR FIX
+========================================= */
+
+/* Chat bubble */
+.mochi-bubble {
+    background: #f2d9d8 !important;
+    color: #49343c !important;
+    border: 2px solid #b77b86 !important;
+}
+
+.mochi-bubble p,
+#mochiMessage {
+    color: #49343c !important;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* Room text */
+.room-header,
+.room-header span,
+.room-footer,
+.room-footer p,
+#roomMessage {
+    color: #f5dce0 !important;
+}
+
+/* Mochi name */
+.mochi-name {
+    color: #f2d9d8 !important;
+}
+
+/* Close button */
+#closeMochiRoom {
+    color: #f5dce0 !important;
+}
+
+/* All text inside room */
+.mochi-room * {
+    text-shadow: none;
+}
+
+
+/* =========================================
+   MOCHI INTERACTIVE ANIMATIONS
+========================================= */
+
+/* Happy jump */
+@keyframes mochiHappy {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-22px);
+    }
+    55% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Sleep animation */
+@keyframes mochiSleep {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(3px);
+    }
+}
+
+/* Wiggle */
+@keyframes mochiWiggle {
+    0%, 100% {
+        rotate: 0deg;
+    }
+    25% {
+        rotate: -8deg;
+    }
+    75% {
+        rotate: 8deg;
+    }
+}
+
+/* Heart floating */
+@keyframes mochiHeart {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.5);
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-35px) scale(1.2);
+    }
+}
+
+/* Happy state */
+.mochi-character.happy {
+    animation: mochiHappy 0.65s ease;
+}
+
+/* Playing state */
+.mochi-character.playing {
+    animation: mochiWiggle 0.4s ease infinite;
+}
+
+/* Sleeping state */
+.mochi-character.sleeping {
+    animation: mochiSleep 2s ease-in-out infinite;
+    filter: brightness(0.75);
+}
+
+/* Heart effect */
+.mochi-heart {
+    position: absolute;
+    color: #e8a3b0;
+    font-size: 18px;
+    pointer-events: none;
+    animation: mochiHeart 1s ease forwards;
+    z-index: 10002;
+}
+
+/* Sleeping bubble */
+.mochi-sleep-text {
+    color: #f2d9d8;
+    font-size: 11px;
+    font-family: 'Courier New', monospace;
+}
+
+
+/* =========================================
+   MOCHI SLEEP MESSAGE FIX
+========================================= */
+
+.mochi-bubble {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mochi-bubble.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.mochi-bubble p,
+#mochiMessage {
+    color: #49343c !important;
+    background: transparent !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Sleep message */
+.mochi-bubble.sleeping-message {
+    background: #f2d9d8 !important;
+    border-color: #b77b86 !important;
+}
+
+.mochi-bubble.sleeping-message p {
+    color: #49343c !important;
+}
+
+
+/* =========================================
+   MOCHI DAILY LIFE ANIMATIONS
+========================================= */
+
+/* Automatic blinking */
+@keyframes mochiBlink {
+    0%, 45%, 49%, 100% {
+        transform: scaleY(1);
+    }
+
+    47% {
+        transform: scaleY(0.1);
+    }
+}
+
+.mochi-eye {
+    transform-origin: center;
+    animation: mochiBlink 4s infinite;
+}
+
+/* Tail wagging */
+@keyframes mochiTail {
+    0%, 100% {
+        transform: rotate(-12deg);
+    }
+
+    50% {
+        transform: rotate(12deg);
+    }
+}
+
+/* Idle breathing */
+@keyframes mochiBreathing {
+    0%, 100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -2px;
+    }
+}
+
+.mochi-character:not(.sleeping):not(.happy):not(.playing) {
+    animation: mochiBreathing 2s ease-in-out infinite;
+}
+
+/* Pet animation */
+@keyframes mochiPet {
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    25% {
+        transform: translateY(-8px) rotate(-5deg);
+    }
+
+    75% {
+        transform: translateY(-4px) rotate(5deg);
+    }
+}
+
+.mochi-character.petted {
+    animation: mochiPet 0.5s ease;
+}
+
+/* Thought bubble */
+.mochi-bubble.thought {
+    border-radius: 18px !important;
+    box-shadow: 2px 3px 0 #b77b86;
+}
+
+
+/* =========================================
+   MOCHI BODY RESTORE
+========================================= */
+
+.mochi-character {
+    position: relative !important;
+    width: 105px !important;
+    height: 115px !important;
+    overflow: visible !important;
+}
+
+.mochi-head {
+    position: absolute;
+    top: 23px;
+    left: 8px;
+    width: 89px;
+    height: 67px;
+    z-index: 3 !important;
+}
+
+.mochi-body {
+    position: absolute !important;
+    display: block !important;
+
+    left: 25px !important;
+    bottom: 0 !important;
+
+    width: 55px !important;
+    height: 31px !important;
+
+    background: #211b1e !important;
+    border: 3px solid #b77b86 !important;
+    box-shadow: 4px 4px 0 #754c57 !important;
+
+    z-index: 2 !important;
+}
+
+.mochi-paw {
+    display: block !important;
+    position: absolute !important;
+    bottom: -2px !important;
+
+    width: 13px !important;
+    height: 9px !important;
+
+    background: #eee2d9 !important;
+}
+
+.mochi-paw-left {
+    left: 5px !important;
+}
+
+.mochi-paw-right {
+    right: 5px !important;
 }

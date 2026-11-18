@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Wish ✦</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/wish.css">
+</head>
+<body class="wish-page">
+
+    <div class="wish-background">
+        <div class="wish-stars"></div>
+        <div class="wish-moon"></div>
+    </div>
+
+    <div class="wish-container">
+
+        <a href="story.html" class="wish-back">← Back</a>
+
+        <div class="wish-content">
+
+            <p class="wish-eyebrow">A LITTLE WISH FOR YOU</p>
+
+            <h1>Make a Wish<span> ✦</span></h1>
+
+            <p class="wish-description">
+                A new age, a new chapter, and endless possibilities.
+                What is one thing you wish for this year?
+            </p>
+
+            <div class="wish-card">
+
+                <div class="wish-star-icon">✧</div>
+
+                <label for="wishInput">
+                    Write your wish here...
+                </label>
+
+                <textarea
+                    id="wishInput"
+                    placeholder="I wish..."
+                    maxlength="200"
+                ></textarea>
+
+                <div class="wish-bottom">
+                    <span id="wishCounter">0 / 200</span>
+
+                    <button id="makeWishBtn">
+                        Make a Wish ✦
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="wish-result" id="wishResult">
+                <div class="shooting-star">✦</div>
+
+                <p class="wish-result-title">
+                    Your wish is now among the stars.
+                </p>
+
+                <p id="wishMessage"></p>
+
+                <span class="wish-signature">
+                    May the universe be kind to you ♡
+                </span>
+            </div>
+
+            <a href="game.html" class="wish-next">
+                PLAY WITH MOCHI
+                <span>→</span>
+            </a>
+
+            <p class="wish-footer">
+                made with love, just for you.
+            </p>
+
+        </div>
+    </div>
+
+    <script src="../js/wish.js"></script>
+
+</body>
+</html>
